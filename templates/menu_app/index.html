@@ -1,0 +1,11 @@
+{% extends 'menu_app/base.html' %}
+{% load menu_tag %}
+
+{% block content %}
+    <nav>
+        {% draw_menu "main_menu" %}
+    </nav>
+    <h1>
+        {{ name }}
+    </h1>
+{% endblock %}
