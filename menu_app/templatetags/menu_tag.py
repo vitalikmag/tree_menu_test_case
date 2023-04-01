@@ -8,11 +8,10 @@ from ..models import Menu
 
 register = template.Library()
 
-url_ok = re.compile(r'^http[s]?://')
-
 
 def get_menu(context, name, parent):
     current_path = ''
+    url_ok = re.compile(r'^http[s]?://')
     if 'request' in context and isinstance(context['request'], HttpRequest):
         current_path = context['request'].path
 
